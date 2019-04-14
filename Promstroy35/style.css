@@ -188,7 +188,6 @@ li.hasSubmenu:hover ul.sub_menu a {
 
 .slick-slider__item {
     position: relative;
-    width: ;
 }
 
 .slick-slider {
@@ -716,10 +715,10 @@ li.hasSubmenu:hover ul.sub_menu a {
     align-items: center;
     flex-direction:;
     flex-wrap: wrap;
-    width: 70%;
+    width: 100%;
 }
 
-.footer_element p {
+.footer_element .footer_yslugi {
     position: relative;
     top: 87px;
     left: -21px;
@@ -769,4 +768,36 @@ li.hasSubmenu:hover ul.sub_menu a {
 .footer_item3 img {
     position: relative;
     top: -10px;
+}
+
+.block3_more {
+    position: relative;
+    height: 100%;
+    width: auto;
+    font-size: 12px;
+}
+
+.block3_more p{
+    font-weight: bold;
+    color: #3C74FF;
+    width: 100%;
+}
+
+.block3_list li{
+    font-style: normal;
+    font-weight: normal;
+    color: #F9F9F9;
+}
+
+.block3_more_item {
+    display: flex;
+    align-items: center;
+    width: 196px;
+    height: 40px;
+    background-color: #123EAB;
+}
+
+.block3_more_item .block3_more_item_text {
+    text-align:center;
+    color: #F9F9F9;
 }
