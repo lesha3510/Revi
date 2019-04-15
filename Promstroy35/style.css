@@ -919,7 +919,7 @@ li.hasSubmenu:hover ul.sub_menu a {
 
 .footer_niz_wrapper {
     display: flex;
-    width: 50%;
+    width: 38%;
     justify-content: space-between;
 }
 
@@ -931,4 +931,13 @@ li.hasSubmenu:hover ul.sub_menu a {
 
 .footer_niz_element1 img {
     height: auto;
+    padding-right: 26px;
+}
+
+.line_footer {
+    display:block;
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: white;
 }
