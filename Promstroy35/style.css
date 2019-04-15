@@ -899,3 +899,36 @@ li.hasSubmenu:hover ul.sub_menu a {
     line-height: normal;
     text-align: center;
 }
+
+.footer_niz {
+    display: flex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 15px;
+    height: 90px;
+    align-items: flex-end;
+}
+
+.footer_niz_element1 {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.footer_niz_wrapper {
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+}
+
+.footer_niz_item {
+    position: relative;
+    list-style: none;
+    color:#898989;
+}
+
+.footer_niz_element1 img {
+    height: auto;
+}
