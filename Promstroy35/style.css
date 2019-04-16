@@ -29,6 +29,100 @@ body {
     overflow-x: hidden;
 }
 
+.hamburger {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 96px;
+    height: 96px;
+    font-size: 0;
+    box-shadow: none;
+    cursor: pointer;
+    background:#333333;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    position: absolute;
+    top: 44px;
+    left: 18px;
+    right: 18px;
+    height: 8px;
+    background: white;
+}
+
+.hamburger span::before, .hamburger span::after {
+    position: absolute;
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background:white;
+    content: "";
+}
+
+.hamburger span::before {
+    top: -20px;
+}
+
+.hamburger span::after {
+    bottom: -20px;
+}
+
+.hamburger:focus {
+    outline: none;
+    background-color: red;
+}
+
+.hamburger-animation span {
+    transition: background 0s 0.3s;
+}
+
+.hamburger-animation span::before, .hamburger-animation span::after {
+    transition-duration: 0.3s, 0.3s;
+    transition-delay: 0.3s, 0s;
+}
+
+.hamburger-animation span::before {
+    transition-property: top, transform;
+}
+
+.hamburger-animation span::after {
+    transition-property: bottom, transform;
+}
+
+.hamburger-animation.is-active {
+    background: green;
+}
+
+.hamburger-animation.is-active span{
+    background:none;
+}
+
+
+.hamburger-animation.is-active {
+    background: black;
+}
+
+.hamburger-animation.is-active span::before {
+    top:0;
+    transform: rotate(-45deg);
+}
+
+.hamburger-animation.is-active span::after {
+    bottom:0;
+    transform: rotate(45deg);
+}
+
+.hamburger-animation.is-active span::before,.hamburger-animation.is-active span::after {
+    transition-delay: 0s, 0,3s;
+}
+
 .pre_header span {
     color: white;
 }
