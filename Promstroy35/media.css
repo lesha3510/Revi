@@ -2,9 +2,6 @@
 @media all and (min-width:1024px) { /* Для цветных экранов */
     body { background: #fc0; }
 
-    .slick-slider .slider_img1 {
-        width: 70%;
-    }
 
 }
 
@@ -48,6 +45,18 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media all and (max-width: 920px) {
     .header .col-6:nth-of-type(2) {

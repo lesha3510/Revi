@@ -137,15 +137,19 @@ li.hasSubmenu:hover ul.sub_menu a {
 ul.sub_menu li:hover a{
     display: block;
     background-color:#123EAB;
+    text-decoration: none;
 }
 
 .sub_menu a {
     display: none;
     position: relative;
     color:#333333;
-    padding-left: 14px;
-    padding-top: 11px;
-    padding-bottom: 1px;
+    padding: 10px;
+}
+
+.sub_menu a:hover {
+    display: block;
+    color: white;
 }
 
 .sub_menu__item a:hover {
@@ -702,7 +706,7 @@ ul.sub_menu li:hover a{
 }
 
 .seo_element_item2::-webkit-scrollbar{
-    width: 10px;
+    width: 4px;
     background-color: gray;
     border-radius: 30px;
     overflow: visible;
