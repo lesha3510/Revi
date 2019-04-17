@@ -7,8 +7,8 @@ ul, li, ol, p {
  padding: 0;
  margin: 0;
  line-height: 1;
- -webkit-transition: all .8s ease-in-out;
- transition: all .8s ease-in-out;
+ -webkit-transition: all .2s ease-in-out;
+ transition: all .2s ease-in-out;
 }
 
 /*
@@ -30,7 +30,7 @@ body {
 }
 
 .hamburger {
-    display: block;
+    display: none;
     position: absolute;
     right: 0;
     top: 0;
@@ -38,7 +38,7 @@ body {
     margin: 0;
     padding: 0;
     width: 96px;
-    height: 96px;
+    height: 66px;
     font-size: 0;
     box-shadow: none;
     cursor: pointer;
@@ -49,7 +49,7 @@ body {
 .hamburger span {
     display: block;
     position: absolute;
-    top: 44px;
+    top: 30px;
     left: 18px;
     right: 18px;
     height: 8px;
@@ -368,21 +368,25 @@ ul.sub_menu li:hover a{
     line-height: 42px;
 }
 
-.content_h1 {
-    padding: 0 0;
+.content_h1_wrapper{
     position: relative;
-    font-size: 36px;
-    left: 77px;
-    top: -5px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start
 }
+
+.content_h1 {
+    font-size: 36px;
+    padding-left: 70px;
+}
+
 
 .content1 {
     position: relative;
     padding-top: 70px;
-}
-
-.content1 .row {
-    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -410,15 +414,20 @@ ul.sub_menu li:hover a{
     position: absolute;
 }
 
+.content1_list_wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
 .content1__list {
+    position: relative;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    position: relative;
-    padding: 10px;
-    left: 65px;
-    top: 13px;
     line-height: 20px;
+    justify-content: center;
 }
 
 .element__content {
@@ -428,17 +437,36 @@ ul.sub_menu li:hover a{
     width: 301px;
     height: 291px;
     border: 1px solid #E0E0E0;
-    margin-right: 32px;
     margin-bottom: 30px;
+    margin-left: 26px;
 }
 
 .element__bg {
+    display: none;
+}
+
+.element__image {
+    position: relative;
+    display: flex;
+    flex: 0 1 80%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(attr('data-src'));
+    min-height: 200px;
+    background-repeat: no-repeat;
+}
+
+.content1_element_fon{
     position: absolute;
     display: none;
-    background-color: #082468;
     width: 100%;
     height: 100%;
-    opacity: 0.2;
+    background-color: #082468;
+    opacity: 0.6;
+}
+
+.element__image:hover .content1_element_fon{
+    display: block;
 }
 
 .element__image:hover .element__bg{
@@ -464,6 +492,7 @@ ul.sub_menu li:hover a{
     width: 143px;
     height: 40px;
     background-repeat: no-repeat;
+    z-index: 10;
 }
 
 /*
@@ -472,16 +501,7 @@ ul.sub_menu li:hover a{
 }
 */
 
-.element__image {
-    position: relative;
-    display: flex;
-    flex: 0 1 80%;
-    justify-content: center;
-    align-items: center;
-    background-image: url(attr('data-src'));
-    min-height: 200px;
-    background-repeat: no-repeat;
-}
+
 
 .content1__item {
     font-weight: bold;
@@ -518,89 +538,150 @@ ul.sub_menu li:hover a{
 .content2{
     margin-bottom: 32px;
     position: relative;
-    width: 1545px;
-    height: 475px;
+    width: 100%;
+    height: 100%;
 /*    background-color:;*/
     z-index: 1000;
 }
 
 .content2_item {
     position: relative;
-    width: 912px;
-    height: 450px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:#082468;
+    height: 100%;
+    width: 100%;
     color: white;
 }
 
-.content2_h1 {
+.content2_fon_wrapper {
     position: absolute;
-    top: 53px;
-    left: 344px;
+    width: 48.5%;
+    height: 90%;
+    left: 0px;
+    background-color:#082468;
+}
+
+
+.content2_item_wrapper1 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.content2_item_wrapper {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.content2_element1_wrapper{
+    position: relative;
+    margin-right: 10px;
+}
+
+.content2_h1 {
+    position: relative;
     font-size: 36px;
     font-weight: 600;
 }
 
 .content2_p {
-    position: absolute;
+    position: relative;
     width: 370px;
     height: 235px;
     font-size: 14px;
-    left: 341px;
-    top:113px;
+
+}
+
+.content2_p p {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.content2__more {
+    position: relative;
+    display: flex;
+    top:23px;
+    width: 190px;
+    height: 40px;
+    background-color:#123EAB;
+    align-items: center;
+}
+
+.content2_element_item2 {
+    width: 100%;
+    position: relative;
+}
+
+.content2_element_wrapper2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
 }
 
 
 
-.content2_element_wrapper {
+.content2_element_wrapper{
     display: flex;
     position: relative;
     justify-content: space-between;
-    align-items: center;
-    width: 770px;
-    height: 296px;
-    left: 670px;
-    top:103px;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
 }
+
+.content2_item_wrapper1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content2_element2_wrapper {
+    position: relative;
+    padding-top: 230px;
+    width: 730px;
+}
+
 
 .block {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     width: 239px;
     height: 296px;
     background-color:#123EAB;
+    flex-direction: column;
 }
 
 .block__img {
-    position: absolute;
-    top: 32px;
-    left: 75px;
+    position: relative;
+    margin-bottom: 10px;
 }
 
 .block__wrapper {
-    position: absolute;
     width: 180px;
-    top: 150px;
-    left: 30px;
-    line-height: 25px;
+    padding-top: 22px;
 }
 
 .block__title {
     position: relative;
     width: auto;
-    left: 7px;
     font-size: 18px;
+    font-weight: 700;
+    line-height: 25px;
 }
 
 .block__desc {
-    position: relative;
-    top:8px;
-    left: 2px;
     font-size: 14px;
-    line-height: 20px;
+    padding-top: 20px;
+    line-height: 18px;
 }
 
 .content2_element li {
@@ -629,15 +710,6 @@ ul.sub_menu li:hover a{
     font-size: 14px;
 }
 
-.content2__more {
-    position: absolute;
-    display: flex;
-    top:235px;
-    width: 190px;
-    height: 40px;
-    background-color:#123EAB;
-    align-items: center;
-}
 
 .content2__more a {
     position: relative;

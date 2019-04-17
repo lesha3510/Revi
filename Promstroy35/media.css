@@ -1,13 +1,10 @@
 
-@media all and (min-width:1024px) { /* Для цветных экранов */
+@media (min-width:1024px) { /* Для цветных экранов */
     body { background: #fc0; }
-
-
 }
 
-@media all and (max-width:1199px) {
+@media (max-width:1199px) {
     body {
-        background: aqua
     }
 
     .container {
@@ -46,19 +43,15 @@
 
 }
 
+@media (max-width:991px){
 
+}
 
+@media (max-width:767px) {
+    .hamburger {
+        display: block;
+    }
 
-
-
-
-
-
-
-
-
-
-@media all and (max-width: 920px) {
     .header .col-6:nth-of-type(2) {
         display: none;
     }
@@ -66,5 +59,31 @@
     .footer_element_block1 {
         column-count: 1;
     }
+    .content2_fon_wrapper {
+        width: 100%;
+    }
+}
+
+@media all and (max-width:575px) {
 
 }
+
+
+
+
+@media all and (max-width:1510px) {
+    .content2_element1_wrapper {
+        width: 130%;
+    }
+
+    .content2_element2_wrapper {
+        padding-top: 0;
+    }
+
+    .content2_wrapper {
+        padding-top: 52px;
+    }
+
+}
+
+
