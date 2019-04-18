@@ -135,6 +135,7 @@ body {
 #menu.nav-active {
     right:0;
     transition: all ease 2s;
+    background:#082468;
 }
 
 .pre_header span {
