@@ -32,8 +32,8 @@ body {
 .hamburger {
     display: none;
     position: absolute;
-    right: 10px;
-    top: 9px;
+    right: 234px;
+    top: 46px;
     overflow: hidden;
     margin: 0;
     padding: 0;
@@ -104,6 +104,7 @@ body {
 
 .hamburger-animation.is-active {
     background: black;
+    left: 20px;
 }
 
 .hamburger-animation.is-active span::before {
@@ -118,6 +119,21 @@ body {
 
 .hamburger-animation.is-active span::before,.hamburger-animation.is-active span::after {
     transition-delay: 0s, 0,3s;
+}
+
+#menu {
+    width: 300px;
+    background: black;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: -208px;
+    transition: all ease 1s;
+}
+
+#menu.nav-active {
+    right:0;
+    transition: all ease 2s;
 }
 
 .pre_header span {
