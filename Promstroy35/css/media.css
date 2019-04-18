@@ -23,6 +23,10 @@
     body {
     }
 
+    #menu {
+        display: block;
+    }
+
     .hamburger {
         display: block;
     }

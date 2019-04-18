@@ -122,6 +122,7 @@ body {
 }
 
 #menu {
+    display: none;
     width: 300px;
     background: black;
     position: fixed;
