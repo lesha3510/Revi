@@ -32,27 +32,28 @@ body {
 .hamburger {
     display: none;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 10px;
+    top: 9px;
     overflow: hidden;
     margin: 0;
     padding: 0;
-    width: 96px;
-    height: 66px;
+    width: 50px;
+    height: 50px;
     font-size: 0;
     box-shadow: none;
     cursor: pointer;
-    background:#333333;
+    background:#082468;
     border: none;
+    border-radius: 10px;
 }
 
 .hamburger span {
     display: block;
     position: absolute;
-    top: 30px;
-    left: 18px;
-    right: 18px;
-    height: 8px;
+    top: 24px;
+    left: 10px;
+    right: 10px;
+    height: 4px;
     background: white;
 }
 
@@ -61,22 +62,21 @@ body {
     display: block;
     left: 0;
     width: 100%;
-    height: 8px;
+    height: 4px;
     background:white;
     content: "";
 }
 
 .hamburger span::before {
-    top: -20px;
+    top: -10px;
 }
 
 .hamburger span::after {
-    bottom: -20px;
+    bottom: -10px;
 }
 
 .hamburger:focus {
     outline: none;
-    background-color: red;
 }
 
 .hamburger-animation span {
@@ -96,9 +96,6 @@ body {
     transition-property: bottom, transform;
 }
 
-.hamburger-animation.is-active {
-    background: green;
-}
 
 .hamburger-animation.is-active span{
     background:none;
@@ -128,6 +125,7 @@ body {
 }
 
 .pre_header{
+    display: block;
     background-color:#333333;
     font-size: 12px;
     height: 39px;
@@ -307,8 +305,17 @@ ul.sub_menu li:hover a{
 
 .slick-slider {
     width: 1400px;
+    height: 100%;
     z-index: 2;
     max-width: 80%;
+}
+
+.niz_slider_wrapper {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    bottom: 0;
 }
 
 
@@ -345,13 +352,11 @@ ul.sub_menu li:hover a{
 }
 
 .slider-wrapper .nizslider {
-    position: absolute;
+    position: relative;
     align-items: center;
     width: 670px;
     height: 160px;
     z-index: 20;
-    bottom: 0;
-    left: 342px;
     background-color: rgba(8, 36, 104, .7);
     padding: 26px;
     padding-left: 47px;
@@ -369,11 +374,6 @@ ul.sub_menu li:hover a{
 }
 
 .content_h1_wrapper{
-    position: relative;
-    width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start
 }
 
 .content_h1 {
@@ -389,11 +389,6 @@ ul.sub_menu li:hover a{
     height: 100%;
 }
 
-
-.slick-prev {
-    display: flex;
-    position: relative;
-}
 
 .slick-prev.slick-arrow {
     position: absolute;
@@ -525,7 +520,7 @@ ul.sub_menu li:hover a{
 
 .content1 .fon {
     position: absolute;
-    background-image: linear-gradient(to right, transparent 50%, white), url('Fon1.png');
+    background-image: linear-gradient(to right, transparent 50%, white), url(../img/Fon1.png);
     background-repeat:repeat;
     top: -100px;
     width: 615px;
@@ -545,10 +540,6 @@ ul.sub_menu li:hover a{
 }
 
 .content2_item {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
     width: 100%;
     color: white;
@@ -581,7 +572,7 @@ ul.sub_menu li:hover a{
 
 .content2_element1_wrapper{
     position: relative;
-    margin-right: 10px;
+
 }
 
 .content2_h1 {
@@ -605,15 +596,7 @@ ul.sub_menu li:hover a{
     line-height: 22px;
 }
 
-.content2__more {
-    position: relative;
-    display: flex;
-    top:23px;
-    width: 190px;
-    height: 40px;
-    background-color:#123EAB;
-    align-items: center;
-}
+
 
 .content2_element_item2 {
     width: 100%;
@@ -697,6 +680,8 @@ ul.sub_menu li:hover a{
     left: 75px;
 }
 
+
+
 .content2_element h5 {
     position: relative;
     padding-top: 64px;
@@ -705,25 +690,32 @@ ul.sub_menu li:hover a{
     font-weight: 600;
 }
 
+
 .content2_element p {
     position: relative;
     font-size: 14px;
 }
 
+.content2__more {
+    position: relative;
+    display: flex;
+    width: 190px;
+    height: 40px;
+    background-color:#123EAB;
+    align-items: center;
+    justify-content: center;
+}
 
 .content2__more a {
     position: relative;
     font-weight: 700;
     color: white;
-    transform-origin: center;
-    transform: translate(-2px,-2px);
-    left: 25px;
 }
 
 .content3 {
     position: relative;
     height: 280px;
-    background-image: url(content3_img.png);
+    background-image: url(../img/content3_img.png);
     object-fit: cover;
     margin-top: 60px;
 }
@@ -919,11 +911,10 @@ ul.sub_menu li:hover a{
 .footer {
     position: relative;
     margin-top: 59px;
-    height: 323px;
     padding-top: 13px;
     background-color:#333333;
 /*    background-image: url(Fon1.png), linear-gradient(rgba(30,30,30,.7),rgba(30,30,30,.7));*/
-    background-image: url(footer_fon.png), linear-gradient(rgba(30, 30, 30, 0.7),rgba(30, 30, 100, 0.7));
+    background-image: url(../img/footer_fon.png), linear-gradient(rgba(30, 30, 30, 0.7),rgba(30, 30, 100, 0.7));
     background-blend-mode: color-burn;
 }
 
@@ -945,8 +936,6 @@ ul.sub_menu li:hover a{
     line-height: 55px;
 }
 
-.footer .container {
-}
 
 .footer_element{
     width: 100%;
@@ -967,6 +956,9 @@ ul.sub_menu li:hover a{
     color: #3C74FF;
     font-style: normal;
     font-weight: bold;
+}
+
+.footer_element_list1_wrapper {
 }
 
 .footer_element_list1 {
@@ -1106,6 +1098,9 @@ ul.sub_menu li:hover a{
 
 .footer_element_item1 {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     width: 100%;
 }
 
@@ -1137,6 +1132,7 @@ ul.sub_menu li:hover a{
     width: 100%;
     justify-content: space-between;
     flex-wrap: nowrap;
+    margin-bottom: 10px;
 }
 
 .footer_niz_wrapper {
