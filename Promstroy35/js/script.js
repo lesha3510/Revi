@@ -1,15 +1,13 @@
-document.querySelector('.hamburger').addEventListener('click',function(e){
-        e.preventDefault();
-//        humburger.classList.toggle('is-active');
-        if(this.classList.contains('is-active')){
-            this.classList.remove('is-active')
-            document.querySelector('#menu').classList.remove('nav-active')
-        }
-        else {
-            this.classList.add('is-active')
-            document.querySelector('#menu').classList.add('nav-active')
-        }
-    })
+document.querySelector('.hamburger').onclick = function(event) {
+    event.preventDefault();
+    console.log(event.currentTarget)
+    if( event.currentTarget.classList.contains('is-active') ) {
+        event.currentTarget.classList.remove('is-active');
+    } else {
+        event.currentTarget.classList.add('is-active');
+    }
+}
 
-    $('.slick-slider').slick({
-    });
+
+$('.slick-slider').slick();
+
