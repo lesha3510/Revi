@@ -34,6 +34,7 @@ body {
     height: 25px;
     cursor: pointer;
     position: relative;
+    z-index: 1000;
 }
 
 .hamburger span {
@@ -91,7 +92,7 @@ body {
     bottom: 0;
     right: -218px;
     transition: all ease 1s;
-    z-index: 1000;
+    z-index: 100;
 }
 
 #menu.nav-active {
