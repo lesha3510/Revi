@@ -32,6 +32,7 @@
         display: block;
     }
 
+
     .hamburger {
         display: flex;
     }
@@ -42,6 +43,14 @@
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    }
+
+    .footer_element_block1 {
+        display: none;
+    }
+
+    .footer_yslugi {
+        display: none;
     }
 
     .header__wrapper{
@@ -72,17 +81,6 @@
 
     }
 
-
-
-    .seo_element_item1 {
-        width: 100%;
-
-    }
-
-    .seo_element_item2 {
-        margin-top: 30px;
-        width: 80%;
-    }
 
     .slick-slider__item {
         width: 100%;
@@ -169,6 +167,11 @@
     .footer_element_block1 {
         width: 90%;
     }
+    .seo_element_item1 {
+        width: 100%;
+        max-width: 400px;
+        margin-bottom: 50px;
+    }
 
 }
 
@@ -197,6 +200,32 @@
     .content1 .fon {
         height: 150%;
     }
+
+    .slick-prev.slick-arrow{
+        display: none;
+    }
+
+    .slick-next.slick-arrow {
+        display: none;
+    }
+
+    .slick-prev.slick-arrow {
+        bottom: 20px;
+        right: 80px;
+        display: none !important;
+    }
+
+    .slick-next.slick-arrow {
+        bottom: 20px;
+        right: 30px;
+        display: none !important;
+    }
+
+    .seo_element_item2 {
+        width: 100%;
+    }
+
+
 }
 
 
@@ -206,8 +235,16 @@
         flex-wrap: wrap;
     }
 
+    .content1__list {
+        width: 100%;
+    }
+
     .hamburger {
         top: 5px;
+    }
+
+    .footer_element_item1 {
+        justify-content: flex-start;
     }
 
     .footer_element_list2 {
@@ -221,7 +258,7 @@
     }
 
     .footer__frame {
-        justify-content: center;
+        justify-content: flex-start;
         top: 0;
         left: 0;
     }
@@ -230,7 +267,10 @@
         font-size:16px;
     }
 
-
+    .seo_wrapper_img1 {
+        width: auto;
+        height: auto;
+    }
 
     .footer_niz {
         height: auto;
@@ -247,7 +287,7 @@
     }
 
     .footer_niz_element1 {
-        width: 50%;
+/*        width: 50%;*/
     }
 
     .footer_niz_wrapper {
@@ -383,26 +423,23 @@
     }
 
     .seo_wrapper_img1:before {
-        left: -30px;
+        left: -25px;
+        width: 100%;
+        height: 100%;
     }
 
     .seo_wrapper_img1:after {
-        right:-40px;
+        right: -25px;
+        width: 100%;
+        height: 100%;
+        top: 20px;
     }
 
     .niz_slider_wrapper {
         width: 100%;
     }
 
-    .slick-prev.slick-arrow {
-        bottom: 20px;
-        right: 80px;
-    }
 
-    .slick-next.slick-arrow {
-        bottom: 20px;
-        right: 30px;;
-    }
 
     .seo_element_item2 p{
         width: 100%;
