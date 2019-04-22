@@ -20,14 +20,12 @@ document.querySelector('.hamburger').onclick = function (event) {
 			element.classList.remove('view')
 		})
 
-
-
-
 	} else {
 		event.currentTarget.classList.add('is-active')
 		menu.classList.add('nav-active');
 		body.classList.add('no-active');
 	}
+
 }
 
 var itemHasSubmenu = document.querySelectorAll(".menu-item-has-children > a");
@@ -37,6 +35,21 @@ Array.prototype.forEach.call(itemHasSubmenu, function (element) {
 		event.preventDefault();
 		       event.currentTarget.parentNode.querySelector('.sub-menu').classList.toggle('view');
 	}
+
+//    if(event.querySelector('.sub-menu').classList.contains('view')) {
+//        event.querySelector('.sub-menu').classList.remove('view');
+//    }
 });
+
+document.querySelector('.back-sub-menu').onclick = function(backbutton) {
+    var sub = document.body.querySelector('.sub-menu');
+    backbutton.preventDefault;
+    console.log(sub);
+    if (sub.classList.contains('view')) {
+        sub.classList.remove('view');
+    }
+};
+
+
 
 $('.slick-slider').slick({});

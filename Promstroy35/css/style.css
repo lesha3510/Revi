@@ -112,6 +112,13 @@ body.no-active {
     display: none;
 }
 
+.back-sub-menu {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: brown;
+}
+
 .sub-menu.view{
     position: absolute;
     display: block;
