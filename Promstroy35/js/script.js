@@ -30,10 +30,22 @@ document.querySelector('.hamburger').onclick = function (event) {
 
 var itemHasSubmenu = document.querySelectorAll(".menu-item-has-children > a");
 
+//[1,2,3,4,5,6,7,8,9,10].forEach(function(element) {
+//    console.log(element);
+//});
 Array.prototype.forEach.call(itemHasSubmenu, function (element) {
 	element.onclick = function (event) {
 		event.preventDefault();
-		       event.currentTarget.parentNode.querySelector('.sub-menu').classList.toggle('view');
+        let subMenu = event.target.parentNode.querySelector('.sub-menu');
+        let backSubMenu = subMenu.querySelector('.back-sub-menu');
+        subMenu.classList.add('view');
+
+        backSubMenu.onclick = function() {
+            subMenu.classList.remove('view');
+        }
+
+        let noscroll = event.target.
+
 	}
 
 //    if(event.querySelector('.sub-menu').classList.contains('view')) {
@@ -41,14 +53,14 @@ Array.prototype.forEach.call(itemHasSubmenu, function (element) {
 //    }
 });
 
-document.querySelector('.back-sub-menu').onclick = function(backbutton) {
-    var sub = document.body.querySelector('.sub-menu');
-    backbutton.preventDefault;
-    console.log(sub);
-    if (sub.classList.contains('view')) {
-        sub.classList.remove('view');
-    }
-};
+//document.querySelector('.back-sub-menu').onclick = function(event) {
+//    var sub = document.body.querySelector('.sub-menu');
+//    event.preventDefault;
+//    console.log(sub);
+//    if (sub.classList.contains('view')) {
+//        sub.classList.remove('view');
+//    }
+//};
 
 
 
